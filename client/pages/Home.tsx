@@ -54,7 +54,7 @@ export default function Home() {
         {/* Header */}
         <header className="text-center mb-12">
           <h1 className="text-3xl serif font-semibold text-foreground mb-3">
-            Echo
+            Ecko
           </h1>
           <p className="text-muted-foreground">
             A space to converse with your past self

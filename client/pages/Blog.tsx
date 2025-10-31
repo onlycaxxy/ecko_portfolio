@@ -25,7 +25,7 @@ export default function Blog() {
       image: "/assets/images/blog/blog-between-drift-and-destruction.jpg"
     },
     {
-      slug: "introducing-echo",
+      slug: "introducing-ecko",
       title: "Introducing Ecko",
       excerpt: "在這個世界要求你立刻回答、立刻行動、立刻產出的時候，Ecko 說：「等一下。你真的想清楚了嗎？」",
       date: "2025-01-15",
@@ -39,8 +39,8 @@ export default function Blog() {
       image: "/assets/images/blog/blog-introducing-hikki.jpg"
     },
     {
-      slug: "echo-principles",
-      title: "Echo Principles: A Framework for Thought",
+      slug: "ecko-principles",
+      title: "Ecko Principles: A Framework for Thought",
       excerpt: "How a dynamic notebook becomes a conversation with your past self. Exploring the principles behind reflective thinking and digital note-taking.",
       date: "2024-01-15",
       image: "/assets/images/blog/blog-echo-principles.jpg"

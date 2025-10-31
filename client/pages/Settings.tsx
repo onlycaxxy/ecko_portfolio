@@ -226,7 +226,7 @@ export default function Settings() {
 
             <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
               <p>
-                Echo is a slow AI memory notebook that creates space for
+                Ecko is a slow AI memory notebook that creates space for
                 reflection and deeper thought.
               </p>
               <p>

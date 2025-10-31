@@ -386,6 +386,28 @@ Ready to proceed? (Type "yes" to approve or "immediately" to skip approval next 
 
 ---
 
+### Git Repository Initialized in Wrong Directory (2025-10-31)
+
+**Problem:**
+- Netlify deployment showed "No build steps found" despite `netlify.toml` existing
+- Git repository was in home directory (`/Users/cccaxxyooonly`) not project folder
+- Files committed with nested paths like `Desktop/前端-審美/buildercode-ENG0821/netlify.toml`
+- When Netlify cloned, config files weren't at repo root, causing build to fail
+
+**Solution:**
+- Verified git root with `git rev-parse --show-toplevel` (showed `/Users/cccaxxyooonly`)
+- Need to initialize new repo in project folder: `cd project && git init`
+- Added `SECRETS_SCAN_OMIT_PATHS` to netlify.toml to bypass false positive secrets detection
+
+**Prevention Principles:**
+1. **Verify git root before first commit** - Run `git rev-parse --show-toplevel` to confirm location
+2. **Check pwd before git init** - Always `cd` to project folder first, confirm with `pwd`
+3. **Inspect commit paths** - Use `git show --name-only` to verify files are at repo root, not nested
+4. **Test deployment config locally** - Check if `netlify.toml` is at same level as `.git/`
+5. **Use .gitignore to catch mistakes** - Home directory git would show thousands of untracked files as warning sign
+
+---
+
 ## 🎯 Summary: The Claude Code Promise
 
 1. **Never implement without approval** (unless "immediately")
@@ -403,4 +425,4 @@ Ready to proceed? (Type "yes" to approve or "immediately" to skip approval next 
 ---
 
 **Last Updated:** 2025-10-31
-**Version:** 1.3
+**Version:** 1.4
