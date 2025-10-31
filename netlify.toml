@@ -1,0 +1,12 @@
+[build]
+  command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm run build:client"
+  publish = "dist/spa"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--version"

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kishi — Lo‑fi Zine Portfolio</title>
+    <meta name="description" content="Lo-fi emotional zine art · raw dream glitch · outsider digital aesthetic"/>
+    <link rel="preload" as="image" href="/assets/textures/grain.png">
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Background canvas (optional generative layer) -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Global overlays -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Zine-style index -->
+    <nav class="zine-index" aria-label="Index">
+      <button id="indexToggle" class="index-toggle" aria-expanded="false" aria-controls="indexList">INDEX</button>
+      <ul id="indexList" class="index-list" hidden>
+        <li><a href="#prologue">Prologue</a></li>
+        <li><a href="#fragments">Fragments</a></li>
+        <li><a href="#translation">Pessoa — Disquiet</a></li>
+        <li><a href="#about">About / Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- FX toggles -->
+    <div class="fx">
+      <label><input id="fxScanline" type="checkbox" checked/> scanline</label>
+      <label><input id="fxGrain" type="checkbox" checked/> grain</label>
+      <label><input id="fxGlitch" type="checkbox" checked/> hover‑glitch</label>
+      <label><input id="fxCanvas" type="checkbox" checked/> canvas</label>
+      <label><input id="fxSync" type="checkbox" checked/> sync‑scroll</label>
+    </div>
+
+    <!-- Split scroll columns -->
+    <main class="split">
+      <!-- English left -->
+      <section class="col left" id="colLeft" data-role="en">
+        <article class="block" id="prologue" data-speed="0.15">
+          <h2 class="t">Prologue</h2>
+          <p class="lead glitchy">I believe in <em>responsible creation</em>: not style as ornament, but as a change in how we see.</p>
+          <p>Fragments drift. Noise settles. The page remembers and forgets. I keep what remains: a soft melancholy that sharpens into clarity.</p>
+        </article>
+
+        <article class="block" id="fragments" data-speed="0.25">
+          <h2 class="t">Fragments</h2>
+          <p class="verse">In 2am, your sleeping eyes look to the side — smoke. smoke. smoke. you say nothing; I understand: it was just smoke.</p>
+          <p class="verse">How busy, how noisy, the pressure of living alone. Slow buildings collapse inward; I bike without destination, then eat, read, and it feels okay. (enough.)</p>
+        </article>
+
+        <article class="block" id="translation" data-speed="0.2">
+          <h2 class="t">From Pessoa — The Book of Disquiet</h2>
+          <p class="quote">“To create, I destroyed myself. I fixed myself in the shape of a thing and so left myself outside.”</p>
+          <p class="note">Translated excerpt; the act of translation is a mirror of my own fragmentation.</p>
+        </article>
+
+        <article class="block" id="about" data-speed="0.1">
+          <h2 class="t">About</h2>
+          <p>Kishi — writer / concept architect. Lo‑fi emotional zine art, raw dream glitch, outsider digital aesthetic.</p>
+          <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+        </article>
+      </section>
+
+      <!-- Chinese right -->
+      <section class="col right" id="colRight" data-role="zh">
+        <article class="block" data-speed="0.18">
+          <h2 class="t">序</h2>
+          <p class="lead glitchy">我相信「責任性的創作」：不是為了裝飾的風格，而是改變「看」的方式。</p>
+          <p>碎片漂移，噪點落塵。頁面記得，也遺忘。我留下殘餘：一種柔軟的憂鬱，最後轉為清明。</p>
+        </article>
+
+        <article class="block" data-speed="0.3">
+          <h2 class="t">片段</h2>
+          <p class="verse">凌晨兩點，你側看，煙、煙、煙。你沒有說話；我懂，那只是煙。</p>
+          <p class="verse">一個人生活的壓力又忙又吵。大樓慢慢向內塌陷；我一直騎車，沒有終點。然後買早餐、坐著、讀書。覺得還好——已經足夠。</p>
+        </article>
+
+        <article class="block" data-speed="0.22">
+          <h2 class="t">佩索阿《不安之書》</h2>
+          <p class="quote">「為了創造，我毀滅了自己。我把自己固定成某種形狀，因此把自己留在外面。」</p>
+          <p class="note">翻譯也是鏡子；我在碎裂中看見自己。</p>
+        </article>
+
+        <article class="block" data-speed="0.12">
+          <h2 class="t">關於</h2>
+          <p>紀詩——寫作者／概念建築師。低保真、情感性 zine；原始夢境的 glitch；局外的數位美學。</p>
+          <p>信箱：<a href="mailto:contact@example.com">contact@example.com</a></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <small>© 2025 Kishi. Built as living zine. Toggle FX for clarity vs. grain.</small>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
