@@ -1,6 +1,6 @@
 export default function About() {
   const portraitImage = "/assets/images/portrait.jpg"; // Change to "placeholder" to show placeholder
-  const aboutText = "Only is a person who write, translate, craft and design."; // Edit this text
+  const aboutText = "Only is a person who writes, translates, crafts and designs."; // Edit this text
 
   return (
     <div className="min-h-screen bg-white">
