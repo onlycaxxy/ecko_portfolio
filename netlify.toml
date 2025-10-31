@@ -10,3 +10,4 @@
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--version"
+  SECRETS_SCAN_OMIT_PATHS = ".env.example,DEPLOYMENT.md,dist/**,文字_portfolio/**"
