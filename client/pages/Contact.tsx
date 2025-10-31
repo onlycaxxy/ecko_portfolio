@@ -28,7 +28,7 @@ export default function Contact() {
               href="mailto:hello@portfolio-research.example" 
               className="text-xl serif font-semibold text-misty-blue hover:text-misty-blue/80 focus-ring rounded"
             >
-              hello@portfolio-research.example
+              caxxyweng@gmail.com
             </a>
           </div>
 
