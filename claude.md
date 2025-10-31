@@ -408,6 +408,28 @@ Ready to proceed? (Type "yes" to approve or "immediately" to skip approval next 
 
 ---
 
+### Slug-Filename Mismatch in Dynamic Routes (2025-10-31)
+
+**Problem:**
+- Blog posts showed "invalid date" error and didn't render
+- Routes `/post/introducing-ecko` and `/post/ecko-principles` returned 404
+- Blog.tsx slugs were `"introducing-ecko"` but files were `introducing-echo.md`
+- Inconsistent naming convention: product name "Ecko" vs filename pattern "echo"
+
+**Solution:**
+- Changed Blog.tsx slugs to match actual filenames: `ecko` → `echo`
+- Updated `introducing-ecko` → `introducing-echo` (line 28)
+- Updated `ecko-principles` → `echo-principles` (line 42)
+
+**Prevention Principles:**
+1. **Slugs must exactly match filenames** - Slug `"my-post"` requires file `my-post.md`, not `mypost.md`
+2. **Verify routes immediately after creation** - Click blog post link to test before marking complete
+3. **List files to confirm naming** - Use `ls public/content/blog/` to verify filenames match slugs
+4. **Consistent naming convention** - Document whether product names get normalized (e.g., "Ecko" → "echo")
+5. **Automation should validate** - Content creation scripts should check file exists before adding to listing
+
+---
+
 ## 🎯 Summary: The Claude Code Promise
 
 1. **Never implement without approval** (unless "immediately")
@@ -425,4 +447,4 @@ Ready to proceed? (Type "yes" to approve or "immediately" to skip approval next 
 ---
 
 **Last Updated:** 2025-10-31
-**Version:** 1.4
+**Version:** 1.5

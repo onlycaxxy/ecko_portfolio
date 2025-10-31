@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 export default function Blog() {
   const blogPosts = [
     {
+      slug: "how-to-use-hikki",
+      title: "Hikki 使用指南：從聊天到地圖，實際上怎麼操作？",
+      excerpt: "不用看複雜的教學，就用兩個例子帶你走一遍：考雅思、學 Python，看 Hikki 怎麼把你的想法變成可以動手做的地圖。",
+      date: "2025-10-31",
+      image: "/assets/images/blog/blog-how-to-use-hikki.jpg"
+    },
+    {
       slug: "from-philosophy-to-implementation",
       title: "From Philosophy to Implementation: Building Hikki's Architecture",
       excerpt: "I came from design, writing, translation—spaces where you shape meaning, not systems. When I started building Hikki, I knew I'd need to learn frontend architecture deeply enough to make technical decisions that served the philosophy: this is a tool for seeing how you think.",
